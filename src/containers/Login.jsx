@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginRequest } from "../actions/index";
 import Header from "../components/Header";
 
@@ -37,7 +37,7 @@ const Login = (props) => {
                 <section className="login">
                     <section className="login__container">
                         <h2>Iniciar sesion</h2>
-                        <form className="">
+                        <form className="" onSubmit={handleSubmit}>
                             <input
                                 name="email"
                                 className="input"
@@ -65,6 +65,17 @@ const Login = (props) => {
                                 <a href="/"> Olvide mi contraseña </a>
                             </div>
                         </form>
+                        <section>
+                            <div>
+                                <img src="" alt="" />
+                            </div>
+                            <div>
+                                <img src="" alt="" />
+                            </div>
+                        </section>
+                        <Link to="/register" rel="canonical">
+                            <p className="">Registrate</p>
+                        </Link>
                     </section>
                 </section>
             </Header>
